@@ -4,9 +4,9 @@ This project was Metarial UI with [Repository Link](https://github.com/Programmi
 
 ## Available Servics
 
--English Language
--Spanish Language
--German Language
+- English Language
+- Spanish Language
+- German Language
 
 ### `Language School`
 
