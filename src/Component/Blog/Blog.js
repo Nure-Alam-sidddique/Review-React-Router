@@ -7,7 +7,8 @@ import BlogCard from "../BlogCard/BlogCard";
 const Blog = () => {
     const [courses] = LoadDataFromExternal();
     return (
-      <Container maxWidth="lg">
+        <Container maxWidth="lg">
+            <h1> Language Blog</h1>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
