@@ -3,47 +3,50 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 const useStyle = makeStyles({
   root: {
+    backgroundImage:
+      "url('https://image.freepik.com/free-vector/cerulean-blue-curve-frame-template_53876-99029.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: 380,
+    marginTop: "-30px",
+    marginBottom: "20px",
+  },
+  menu: {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     border: 0,
     borderRadius: 3,
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    boxShadow: "0 3px 5px 2px",
     color: "white",
-    height: 48,
-    padding: "0 30px",
+    padding: "10px 30px",
     textDecoration: "none",
     marginBottom: "30px",
     position: "sticky",
     top: 0,
-  },
-  image: {
-    marginTop: "-30px",
-    marginBottom: "20px",
-    width: "100%",
-    height: "400px"
-  },
+    fontWeight: 400,
+    marginRight: "20px",
+    marginTop: "20px",
+    fontSize:"20px"
+    
+  }
 });
 const Header = () => {
     const classes = useStyle();
   return (
-    <div>
-      <nav className={classes.root}>
-        <NavLink className={classes.root} to="/home">
-          Home
-        </NavLink>
-        <NavLink className={classes.root} to="/courses">
-          Courses
-        </NavLink>
-        <NavLink className={classes.root} to="/blog">
-          Blog
-        </NavLink>
-        <NavLink className={classes.root} to="/about">
-          About
-        </NavLink>
-      </nav>
-      <img
-        className={classes.image}
-        src= "https://image.freepik.com/free-vector/cerulean-blue-curve-frame-template_53876-99029.jpg"
-      alt ="Banner-phot" />
+    <div className={classes.root}>
+        <nav className={classes.root}>
+          <NavLink className={classes.menu} to="/home">
+            Home
+          </NavLink>
+          <NavLink className={classes.menu} to="/courses">
+            Courses
+          </NavLink>
+          <NavLink className={classes.menu} to="/blog">
+            Blog
+          </NavLink>
+          <NavLink className={classes.menu} to="/about">
+            About
+          </NavLink>
+        </nav>
     </div>
   );
 };

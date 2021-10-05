@@ -1,39 +1,25 @@
 
-import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material';
-import React from 'react';
+import { Container, Grid } from "@mui/material";
+import React from "react";
+import LoadDataFromExternal from "../../Hooks/LoadDataFromExternal";
+import BlogCard from "../BlogCard/BlogCard";
 
-const Blog= () => {
+const Blog = () => {
+    const [courses] = LoadDataFromExternal();
     return (
-      <Card sx={{ maxWidth: 345 }} variant="">
-        <CardHeader
-          avatar={
-            <Avatar  aria-label="recipe">
-              R
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-
-            </IconButton>
-          }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
-        />
-        <CardMedia
-        
-          component="img"
-          height="194"
-          image="/static/images/cards/paella.jpg"
-          alt="Paella dish"
-        />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like.
-          </Typography>
-        </CardContent>
-      </Card>
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 3, sm: 8, md: 12 }}
+        >
+          {courses.slice(0,6).map((course) => (
+            <Grid item xs={2} sm={4} md={4} key={course.id}>
+              <BlogCard course={course}></BlogCard>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     );
 };
 
