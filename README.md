@@ -1,8 +1,8 @@
-# Naznin's Language School
+# Language Learning Center
 
 This project was Metarial UI with [Repository Link](https://github.com/ProgrammingHeroWC4/review-website-Nure-Alam-sidddique)
 
-## Available Scripts
+## Available Servics
 
 - English Language
   -Spanish Language
@@ -10,5 +10,4 @@ This project was Metarial UI with [Repository Link](https://github.com/Programmi
 
 ### `Language School`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Language Learning Center Live Link [Language-Learning-Center](https://brave-perlman-b5a689.netlify.app/) to view it in the browser.
